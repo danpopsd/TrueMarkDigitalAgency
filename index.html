@@ -1,951 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>True Mark Digital Agency — More Leads. More Sales. Guaranteed.</title>
-  <meta name="description" content="Get a free AI-powered local SEO audit from True Mark Digital Agency. More leads, more sales, guaranteed." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body { font-family: 'Inter', sans-serif; background: #f4f4f4; color: #111; overflow-x: hidden; }
-    a { text-decoration: none; color: inherit; }
-    input, select, textarea, button { font-family: 'Inter', sans-serif; }
-    .tm-spin { animation: tmSpin 0.8s linear infinite; }
-    @keyframes tmSpin { to { transform: rotate(360deg); } }
-    .tm-pulse { animation: tmPulse 1.2s ease-in-out infinite; }
-    @keyframes tmPulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
-    .tm-fade { animation: tmFade 0.45s ease forwards; }
-    @keyframes tmFade { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:none} }
-    .tm-ticker { animation: tmTick 34s linear infinite; }
-    @keyframes tmTick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-    input:focus, select:focus, textarea:focus { outline: 2px solid #111; outline-offset: 1px; }
-    @media print {
-      .no-print { display: none !important; }
-      body { background: white; }
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>True Mark Digital Agency — Local SEO & Google Visibility</title>
+<meta name="description" content="True Mark Digital Agency helps local businesses get found on Google. GBP optimization, local SEO, AI search visibility, and Google Ads. Results guaranteed."/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#f8f7f5;color:#111;overflow-x:hidden;font-size:15px;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+:root{
+  --black:#111111;--white:#fff;--off:#f8f7f5;
+  --g1:#f0eeeb;--g2:#e0ddd8;--g3:#c4c0ba;--g4:#888480;--g5:#444240;
+  --mono:'DM Mono',monospace;--display:'Bebas Neue',sans-serif;
+  --max:1020px;--pad:48px;
+}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,247,245,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--g2);}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:56px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--display);font-size:17px;letter-spacing:.14em;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--g4);transition:color .15s;}
+.nav-links a:hover{color:var(--black);}
+.nav-cta{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--black);color:#fff;padding:9px 20px;border-radius:2px;transition:opacity .15s;}
+.nav-cta:hover{opacity:.82;}
+
+/* SHARED */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad);}
+.section-tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--g4);margin-bottom:10px;}
+.section-h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);letter-spacing:.02em;line-height:.95;color:var(--black);margin-bottom:36px;}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:13px 26px;border-radius:2px;cursor:pointer;border:none;transition:opacity .15s;}
+.btn:hover{opacity:.82;}
+.btn-black{background:var(--black);color:#fff;}
+.btn-outline{background:transparent;color:var(--black);border:1.5px solid var(--g2);}
+.btn-outline:hover{border-color:var(--black);opacity:1;}
+
+/* HERO */
+.hero{padding:130px var(--pad) 88px;max-width:var(--max);margin:0 auto;}
+.hero-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--g4);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.hero-eyebrow::before{content:'';width:22px;height:1px;background:var(--g3);display:block;}
+.hero-h1{font-family:var(--display);font-size:clamp(3rem,7vw,6rem);letter-spacing:.02em;line-height:.95;color:var(--black);margin-bottom:24px;}
+.hero-h1 span{color:var(--g3);}
+.hero-sub{font-size:17px;font-weight:300;color:var(--g5);line-height:1.7;max-width:50ch;margin-bottom:36px;}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2);border-radius:2px;margin-top:56px;}
+.hstat{background:var(--off);padding:22px 18px;}
+.hstat-num{font-family:var(--display);font-size:2.2rem;letter-spacing:.02em;color:var(--black);line-height:1;margin-bottom:5px;}
+.hstat-lbl{font-size:12px;font-weight:400;color:var(--g4);line-height:1.4;}
+
+/* PROBLEM */
+.problem{background:var(--black);padding:80px var(--pad);}
+.problem-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.problem-tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--g4);margin-bottom:12px;}
+.problem-h2{font-family:var(--display);font-size:clamp(2.2rem,4.5vw,3.6rem);letter-spacing:.02em;line-height:.95;color:#fff;margin-bottom:18px;}
+.problem-body{font-size:15px;font-weight:300;color:var(--g3);line-height:1.7;}
+.problem-stats{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.07);}
+.pstat{background:var(--black);padding:18px 22px;border-left:2px solid rgba(255,255,255,.07);transition:border-color .2s;}
+.pstat:hover{border-left-color:rgba(255,255,255,.35);}
+.pstat-num{font-family:var(--display);font-size:1.8rem;color:#fff;letter-spacing:.02em;margin-bottom:3px;}
+.pstat-text{font-size:13px;color:var(--g4);line-height:1.45;}
+
+/* SERVICES */
+.services{padding:88px var(--pad);max-width:var(--max);margin:0 auto;}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--g2);}
+.scard{background:var(--off);padding:32px 28px;}
+.scard-name{font-family:var(--display);font-size:1.4rem;letter-spacing:.04em;color:var(--black);margin-bottom:10px;}
+.scard-desc{font-size:13px;color:var(--g5);line-height:1.65;}
+.scard-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
+.scard-tag{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);border:1px solid var(--g2);padding:3px 8px;border-radius:2px;}
+
+/* PACKAGES */
+.packages{background:var(--g1);padding:88px var(--pad);}
+.packages-inner{max-width:var(--max);margin:0 auto;}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);margin-top:36px;}
+.pkg{background:#fff;padding:32px 26px;display:flex;flex-direction:column;}
+.pkg-featured{background:var(--black);}
+.pkg-tier{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--g4);margin-bottom:14px;}
+.pkg-name{font-family:var(--display);font-size:1.7rem;letter-spacing:.04em;color:var(--black);margin-bottom:2px;}
+.pkg-featured .pkg-name{color:#fff;}
+.pkg-price{font-family:var(--display);font-size:2.8rem;letter-spacing:.02em;color:var(--black);line-height:1;margin-bottom:3px;}
+.pkg-featured .pkg-price{color:#fff;}
+.pkg-note{font-family:var(--mono);font-size:10px;color:var(--g4);margin-bottom:22px;letter-spacing:.06em;}
+.pkg-div{height:1px;background:var(--g2);margin-bottom:22px;}
+.pkg-featured .pkg-div{background:rgba(255,255,255,.12);}
+.pkg-features{list-style:none;display:flex;flex-direction:column;gap:9px;flex:1;}
+.pkg-features li{font-size:13px;color:var(--g5);display:flex;gap:9px;align-items:flex-start;line-height:1.4;}
+.pkg-featured .pkg-features li{color:var(--g3);}
+.pkg-check{width:15px;height:15px;background:var(--black);color:#fff;border-radius:1px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;flex-shrink:0;margin-top:2px;}
+.pkg-featured .pkg-check{background:rgba(255,255,255,.18);}
+.pkg-cta{margin-top:26px;display:block;text-align:center;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:12px;border-radius:2px;background:var(--black);color:#fff;transition:opacity .15s;}
+.pkg-featured .pkg-cta{background:#fff;color:var(--black);}
+.pkg-cta:hover{opacity:.82;}
+.pkg-guar{margin-top:9px;font-size:11px;color:var(--g4);text-align:center;font-family:var(--mono);letter-spacing:.05em;}
+.pkg-featured .pkg-guar{color:var(--g4);}
+
+/* MINIMUM FEE NOTICE */
+.min-fee{margin-top:14px;background:var(--black);padding:20px 26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.min-fee-label{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--g4);margin-bottom:3px;}
+.min-fee-text{font-size:13px;color:#fff;line-height:1.5;max-width:56ch;}
+.min-fee-amount{font-family:var(--display);font-size:1.8rem;color:#fff;letter-spacing:.03em;white-space:nowrap;}
+
+/* RETAINER */
+.retainer{margin-top:2px;background:var(--g2);padding:22px 26px;display:grid;grid-template-columns:1fr auto auto;gap:24px;align-items:center;}
+.retainer-name{font-family:var(--display);font-size:1.3rem;letter-spacing:.04em;color:var(--black);}
+.retainer-sub{font-size:12px;color:var(--g4);margin-top:2px;}
+.retainer-price{font-family:var(--display);font-size:2rem;color:var(--black);letter-spacing:.02em;white-space:nowrap;}
+.retainer-period{font-family:var(--mono);font-size:9px;color:var(--g4);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;text-align:right;}
+
+/* GUARANTEE */
+.guarantee{padding:72px var(--pad);max-width:var(--max);margin:0 auto;}
+.guarantee-inner{background:var(--black);padding:48px 56px;display:grid;grid-template-columns:3px 1fr;gap:40px;align-items:center;}
+.guarantee-line{background:#fff;height:100%;opacity:.15;}
+.guarantee-h2{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);letter-spacing:.02em;color:#fff;margin-bottom:12px;}
+.guarantee-body{font-size:15px;font-weight:300;color:var(--g3);line-height:1.7;max-width:60ch;margin-bottom:14px;}
+.guarantee-terms{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--g4);}
+
+/* PROCESS */
+.process{background:var(--g1);padding:88px var(--pad);}
+.process-inner{max-width:var(--max);margin:0 auto;}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--g2);margin-top:36px;}
+.pstep{background:var(--off);padding:26px 18px;}
+.pstep-num{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--g3);margin-bottom:10px;}
+.pstep-name{font-size:13px;font-weight:700;color:var(--black);margin-bottom:5px;}
+.pstep-desc{font-size:12px;color:var(--g4);line-height:1.5;}
+
+/* INQUIRY */
+.inquiry{padding:88px var(--pad);max-width:var(--max);margin:0 auto;}
+.inquiry-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start;}
+.inquiry-pitch{font-size:15px;font-weight:300;color:var(--g5);line-height:1.7;margin-bottom:24px;}
+.inquiry-facts{border:1px solid var(--g2);}
+.fact-row{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-bottom:1px solid var(--g2);font-size:12px;}
+.fact-row:last-child{border-bottom:none;}
+.fact-key{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);}
+.fact-val{font-weight:600;color:var(--black);}
+
+/* FORM */
+.form-wrap{background:#fff;border:1px solid var(--g2);padding:32px;}
+.form-title{font-family:var(--display);font-size:1.5rem;letter-spacing:.04em;color:var(--black);margin-bottom:4px;}
+.form-sub{font-size:12px;color:var(--g4);margin-bottom:24px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fg{display:flex;flex-direction:column;gap:5px;}
+.fg.full{grid-column:span 2;}
+.fl{font-size:11px;font-weight:600;color:var(--g5);letter-spacing:.03em;}
+.fi,.fs,.ft{font-family:'Inter',sans-serif;font-size:13px;background:var(--off);border:1px solid var(--g2);color:var(--black);padding:9px 11px;border-radius:2px;transition:border-color .15s;width:100%;}
+.fi:focus,.fs:focus,.ft:focus{outline:none;border-color:var(--black);}
+.ft{resize:vertical;line-height:1.6;}
+.form-submit{width:100%;margin-top:8px;padding:14px;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;background:var(--black);color:#fff;border:none;border-radius:2px;cursor:pointer;transition:opacity .15s;}
+.form-submit:hover{opacity:.82;}
+.form-submit:disabled{opacity:.5;cursor:not-allowed;}
+.form-note{font-size:11px;color:var(--g4);text-align:center;margin-top:8px;line-height:1.5;}
+.form-success{display:none;text-align:center;padding:40px 24px;background:var(--off);border:1px solid var(--g2);}
+.form-success-title{font-family:var(--display);font-size:1.5rem;letter-spacing:.04em;color:var(--black);margin-bottom:8px;}
+.form-success-body{font-size:13px;color:var(--g5);line-height:1.65;}
+.form-error{display:none;background:#fff1f0;border:1px solid #fca5a5;color:#991b1b;padding:10px 14px;border-radius:2px;font-size:12px;margin-top:10px;}
+
+/* FOOTER */
+.footer{background:var(--black);padding:52px var(--pad) 28px;}
+.footer-inner{max-width:var(--max);margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-logo{font-family:var(--display);font-size:20px;letter-spacing:.14em;color:#fff;margin-bottom:8px;}
+.footer-tagline{font-size:13px;color:var(--g4);line-height:1.6;max-width:30ch;}
+.footer-col-label{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--g4);margin-bottom:12px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.footer-links a{font-size:13px;color:var(--g3);transition:color .15s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-size:10px;color:var(--g4);font-family:var(--mono);letter-spacing:.08em;}
+
+/* RESPONSIVE */
+@media(max-width:820px){
+  :root{--pad:24px;}
+  .nav-links{display:none;}
+  .hero-stats,.problem-inner,.services-grid,.pkg-grid,.process-steps,.inquiry-grid,.footer-top{grid-template-columns:1fr;}
+  .guarantee-inner{padding:36px 28px;}
+  .form-grid{grid-template-columns:1fr;}
+  .fg.full{grid-column:span 1;}
+  .retainer{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
+  .min-fee{flex-direction:column;align-items:flex-start;}
+}
+</style>
 </head>
 <body>
-  <div id="root"></div>
 
-  <script type="text/babel">
-    const { useState, useEffect } = React;
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">TRUEMARK DIGITAL AGENCY</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#inquiry">Contact</a></li>
+    </ul>
+    <a href="#inquiry" class="nav-cta">Free Audit</a>
+  </div>
+</nav>
 
-    const T = {
-      bg:"#f4f4f4", white:"#ffffff", dark:"#111111", dark2:"#1c1c1c",
-      border:"#dedede", border2:"#2a2a2a", text:"#111111", sub:"#555555",
-      mute:"#909090", red:"#c0392b", red2:"#a93226",
-      green:"#166534", greenBg:"#dcfce7",
-      amber:"#92400e", amberBg:"#fef3c7",
-      redBg:"#fee2e2", redText:"#991b1b",
-    };
+<section style="padding-top:56px;">
+  <div class="hero">
+    <div class="hero-eyebrow">Local SEO &amp; Google Visibility Agency</div>
+    <h1 class="hero-h1">Your customers<br>are searching.<br><span>Are you visible?</span></h1>
+    <p class="hero-sub">True Mark Digital Agency gets local businesses found on Google — verified listings, map pack rankings, AI search citations, and targeted ads. Results guaranteed or your money back.</p>
+    <div class="hero-btns">
+      <a href="#inquiry" class="btn btn-black">Get a Free Audit</a>
+      <a href="#packages" class="btn btn-outline">View Packages</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-num">81%</div><div class="hstat-lbl">of consumers use Google to evaluate local businesses before contacting them</div></div>
+      <div class="hstat"><div class="hstat-num">1.2%</div><div class="hstat-lbl">of local businesses are currently cited by AI assistants like ChatGPT or Gemini</div></div>
+      <div class="hstat"><div class="hstat-num">266%</div><div class="hstat-lbl">more leads for businesses with 50+ Google reviews vs. under 10</div></div>
+      <div class="hstat"><div class="hstat-num">45%</div><div class="hstat-lbl">of local searches now use AI tools — up from 6% last year</div></div>
+    </div>
+  </div>
+</section>
 
-    const VIEWS = { LANDING:"landing", AUDIT:"audit", LOADING:"loading", RESULTS:"results", ERROR:"error" };
+<section class="problem">
+  <div class="problem-inner">
+    <div>
+      <div class="problem-tag">The Problem</div>
+      <h2 class="problem-h2">Most local businesses are invisible online.</h2>
+      <p class="problem-body">An unverified Google listing, zero reviews, and no local keyword presence means you are losing customers to competitors who are objectively worse — but better at being found. We fix that.</p>
+    </div>
+    <div class="problem-stats">
+      <div class="pstat"><div class="pstat-num">56%</div><div class="pstat-text">of local businesses have not claimed their Google Business Profile</div></div>
+      <div class="pstat"><div class="pstat-num">55%</div><div class="pstat-text">of Google map pack winners are completely invisible to AI search</div></div>
+      <div class="pstat"><div class="pstat-num">70%</div><div class="pstat-text">of local searches result in a store visit within 24 hours</div></div>
+      <div class="pstat"><div class="pstat-num">30x</div><div class="pstat-text">harder to achieve AI citation than a Google map pack ranking</div></div>
+    </div>
+  </div>
+</section>
 
-    // ── Shared ──────────────────────────────────────────────────
-    function LabelCenter({ children }) {
-      return (
-        <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:8,
-          fontFamily:"'DM Mono',monospace",fontSize:11,letterSpacing:"0.2em",textTransform:"uppercase",
-          color:T.red,marginBottom:12}}>
-          <span style={{width:16,height:1,background:T.red,display:"block"}}/>
-          {children}
-          <span style={{width:16,height:1,background:T.red,display:"block"}}/>
-        </div>
-      );
+<section class="services" id="services">
+  <div class="section-tag">What We Do</div>
+  <h2 class="section-h2">Core Services</h2>
+  <div class="services-grid">
+    <div class="scard">
+      <div class="scard-name">GBP Optimization</div>
+      <div class="scard-desc">Full Google Business Profile setup, verification, and optimization. Categories, services, description, photos, Q&amp;A, and posting cadence — everything Google needs to rank and recommend your business.</div>
+      <div class="scard-tags"><span class="scard-tag">Setup</span><span class="scard-tag">Optimization</span><span class="scard-tag">Ongoing</span></div>
+    </div>
+    <div class="scard">
+      <div class="scard-name">Local SEO</div>
+      <div class="scard-desc">Citation building across 30–50 directories, NAP consistency fixes, local keyword landing pages, schema markup, and on-site optimization targeted at your city and service area.</div>
+      <div class="scard-tags"><span class="scard-tag">Citations</span><span class="scard-tag">Keywords</span><span class="scard-tag">Schema</span></div>
+    </div>
+    <div class="scard">
+      <div class="scard-name">AI Search Visibility</div>
+      <div class="scard-desc">Get cited by ChatGPT, Gemini, and Perplexity when local customers ask AI assistants for recommendations. We build the structured presence that makes AI confident recommending your business.</div>
+      <div class="scard-tags"><span class="scard-tag">ChatGPT</span><span class="scard-tag">Gemini</span><span class="scard-tag">Perplexity</span></div>
+    </div>
+    <div class="scard">
+      <div class="scard-name">Google Ads</div>
+      <div class="scard-desc">Targeted search campaigns built for local conversion. Phrase match keywords, geographic targeting, optimized ad copy, and sitelink extensions — focused spend, no wasted budget.</div>
+      <div class="scard-tags"><span class="scard-tag">Search Ads</span><span class="scard-tag">Local Targeting</span><span class="scard-tag">Managed</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="packages" id="packages">
+  <div class="packages-inner">
+    <div class="section-tag">Pricing</div>
+    <h2 class="section-h2">Results-Backed Packages</h2>
+    <div class="pkg-grid">
+
+      <div class="pkg">
+        <div class="pkg-tier">Starter</div>
+        <div class="pkg-name">Presence</div>
+        <div class="pkg-price">$497</div>
+        <div class="pkg-note">ONE-TIME</div>
+        <div class="pkg-div"></div>
+        <ul class="pkg-features">
+          <li><span class="pkg-check">+</span>Full GBP audit and verification</li>
+          <li><span class="pkg-check">+</span>Optimized business description written</li>
+          <li><span class="pkg-check">+</span>Categories, services, and service area set</li>
+          <li><span class="pkg-check">+</span>NAP consistency audit and fix</li>
+          <li><span class="pkg-check">+</span>10 core citation listings built</li>
+          <li><span class="pkg-check">+</span>30-day results report</li>
+        </ul>
+        <a href="#inquiry" class="pkg-cta">Get Started</a>
+        <div class="pkg-guar">GBP live in 14 days or refund*</div>
+      </div>
+
+      <div class="pkg pkg-featured">
+        <div class="pkg-tier">Most Popular</div>
+        <div class="pkg-name">Authority</div>
+        <div class="pkg-price">$997</div>
+        <div class="pkg-note">ONE-TIME</div>
+        <div class="pkg-div"></div>
+        <ul class="pkg-features">
+          <li><span class="pkg-check">+</span>Everything in Presence</li>
+          <li><span class="pkg-check">+</span>30 citation listings across core directories</li>
+          <li><span class="pkg-check">+</span>3 local SEO service pages written and delivered</li>
+          <li><span class="pkg-check">+</span>Review request system configured</li>
+          <li><span class="pkg-check">+</span>AI visibility setup — schema and llms.txt</li>
+          <li><span class="pkg-check">+</span>Competitor gap analysis</li>
+          <li><span class="pkg-check">+</span>60-day results report with ranking data</li>
+        </ul>
+        <a href="#inquiry" class="pkg-cta">Get Started</a>
+        <div class="pkg-guar">Map pack appearance in 90 days or refund*</div>
+      </div>
+
+      <div class="pkg">
+        <div class="pkg-tier">Comprehensive</div>
+        <div class="pkg-name">Dominant</div>
+        <div class="pkg-price">$1,497</div>
+        <div class="pkg-note">ONE-TIME</div>
+        <div class="pkg-div"></div>
+        <ul class="pkg-features">
+          <li><span class="pkg-check">+</span>Everything in Authority</li>
+          <li><span class="pkg-check">+</span>Google Ads campaign built and launched</li>
+          <li><span class="pkg-check">+</span>90-day ad management included</li>
+          <li><span class="pkg-check">+</span>AI search citation campaign</li>
+          <li><span class="pkg-check">+</span>Monthly performance reporting</li>
+          <li><span class="pkg-check">+</span>Priority support throughout</li>
+        </ul>
+        <a href="#inquiry" class="pkg-cta">Get Started</a>
+        <div class="pkg-guar">Map pack top 3 in 90 days or refund*</div>
+      </div>
+
+    </div>
+
+    <div class="min-fee">
+      <div>
+        <div class="min-fee-label">Minimum Project Fee — Non-Refundable</div>
+        <div class="min-fee-text">A $150 minimum fee applies to every project and is non-refundable. This covers our time, research, and overhead. All project fees above $150 are covered by the results guarantee.</div>
+      </div>
+      <div class="min-fee-amount">$150</div>
+    </div>
+
+    <div class="retainer">
+      <div>
+        <div class="retainer-name">Monthly Retainer</div>
+        <div class="retainer-sub">GBP post publishing, review monitoring, ranking reports, and ad performance checks. Available after project delivery.</div>
+      </div>
+      <div>
+        <div class="retainer-price">$1,500</div>
+        <div class="retainer-period">Per Month</div>
+      </div>
+      <a href="#inquiry" class="btn btn-black">Inquire</a>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee">
+  <div class="guarantee-inner">
+    <div class="guarantee-line"></div>
+    <div>
+      <h2 class="guarantee-h2">Results guaranteed. In writing.</h2>
+      <p class="guarantee-body">If we miss the agreed milestone at 90 days, your project fee above the minimum is fully refunded. No disputes. No fine print. The guarantee is written into your agreement before any work begins.</p>
+      <p class="guarantee-terms">* REFUND EXCLUDES THE $150 NON-REFUNDABLE MINIMUM FEE WHICH COVERS RESEARCH AND OVERHEAD.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-h2">Five Steps. No Calls Required.</h2>
+    <div class="process-steps">
+      <div class="pstep"><div class="pstep-num">01</div><div class="pstep-name">Inquiry</div><div class="pstep-desc">Fill out the form. We run a full audit of your current online presence within 24 hours.</div></div>
+      <div class="pstep"><div class="pstep-num">02</div><div class="pstep-name">Audit Report</div><div class="pstep-desc">You receive a detailed report showing exactly what is missing and what it is costing you.</div></div>
+      <div class="pstep"><div class="pstep-num">03</div><div class="pstep-name">Proposal</div><div class="pstep-desc">We recommend the right package with a clear milestone guarantee in writing.</div></div>
+      <div class="pstep"><div class="pstep-num">04</div><div class="pstep-name">Payment</div><div class="pstep-desc">Pay online. Work begins within 24 hours. No kickoff calls, no friction.</div></div>
+      <div class="pstep"><div class="pstep-num">05</div><div class="pstep-name">Delivery</div><div class="pstep-desc">Every deliverable sent, results reported at 30 and 90 days.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="inquiry" id="inquiry">
+  <div class="inquiry-grid">
+    <div>
+      <div class="section-tag">Free Audit</div>
+      <h2 class="section-h2">Find out where you stand.</h2>
+      <p class="inquiry-pitch">We audit your Google Business Profile, local rankings, review presence, citation accuracy, and AI search visibility — then show you exactly what is missing and what it is costing you. Free. No obligation. Delivered within 24 hours.</p>
+      <div class="inquiry-facts">
+        <div class="fact-row"><span class="fact-key">Turnaround</span><span class="fact-val">Within 24 hours</span></div>
+        <div class="fact-row"><span class="fact-key">Cost</span><span class="fact-val">Free — no obligation</span></div>
+        <div class="fact-row"><span class="fact-key">Guarantee</span><span class="fact-val">Results or refund*</span></div>
+        <div class="fact-row"><span class="fact-key">Format</span><span class="fact-val">Everything by email</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="form-wrap" id="form-wrap">
+        <div class="form-title">Request Your Free Audit</div>
+        <div class="form-sub">Takes 2 minutes. Audit delivered to your inbox within 24 hours.</div>
+        <form id="inquiry-form" action="https://formspree.io/f/xzdqrpky" method="POST">
+          <div class="form-grid">
+            <div class="fg">
+              <label class="fl">First Name *</label>
+              <input class="fi" type="text" name="firstName" required placeholder="Jane"/>
+            </div>
+            <div class="fg">
+              <label class="fl">Last Name *</label>
+              <input class="fi" type="text" name="lastName" required placeholder="Smith"/>
+            </div>
+            <div class="fg">
+              <label class="fl">Business Name *</label>
+              <input class="fi" type="text" name="businessName" required placeholder="Smith Plumbing Co."/>
+            </div>
+            <div class="fg">
+              <label class="fl">City &amp; State *</label>
+              <input class="fi" type="text" name="cityState" required placeholder="San Diego, CA"/>
+            </div>
+            <div class="fg">
+              <label class="fl">Email Address *</label>
+              <input class="fi" type="email" name="email" required placeholder="jane@business.com"/>
+            </div>
+            <div class="fg">
+              <label class="fl">Phone</label>
+              <input class="fi" type="tel" name="phone" placeholder="(760) 555-0100"/>
+            </div>
+            <div class="fg">
+              <label class="fl">Business Category *</label>
+              <select class="fs" name="category" required>
+                <option value="">Select...</option>
+                <option>Plumbing</option>
+                <option>HVAC</option>
+                <option>Electrical</option>
+                <option>Roofing</option>
+                <option>Construction / Contractor</option>
+                <option>Landscaping</option>
+                <option>Auto / Detailing</option>
+                <option>Restaurant / Food</option>
+                <option>Medical / Dental</option>
+                <option>Legal Services</option>
+                <option>Real Estate</option>
+                <option>Photography / Studio</option>
+                <option>Retail</option>
+                <option>Other Local Service</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="fl">Website</label>
+              <input class="fi" type="url" name="website" placeholder="https://yoursite.com"/>
+            </div>
+            <div class="fg full">
+              <label class="fl">Biggest Challenge</label>
+              <textarea class="ft" name="challenge" rows="3" placeholder="e.g. Not showing up on Google, no reviews, competitors outranking us..."></textarea>
+            </div>
+            <div class="fg full">
+              <label class="fl">How did you hear about us?</label>
+              <select class="fs" name="source">
+                <option value="">Select...</option>
+                <option>Google Search</option>
+                <option>Google Ads</option>
+                <option>Referral</option>
+                <option>Social Media</option>
+                <option>Cold Email</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="form-submit" id="form-submit">Request Free Audit</button>
+          <div class="form-note">No spam. No sales calls. Audit delivered by email within 24 hours.</div>
+          <div class="form-error" id="form-error">Something went wrong. Please email us directly at truemarkdigitalagency@gmail.com</div>
+        </form>
+      </div>
+      <div class="form-success" id="form-success">
+        <div class="form-success-title">Audit Request Received</div>
+        <div class="form-success-body">We will run your full audit and send the results to your email within 24 hours. No calls required.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">TRUEMARK</div>
+        <div class="footer-tagline">Local SEO and Google visibility for businesses across the US.</div>
+      </div>
+      <div>
+        <div class="footer-col-label">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">GBP Optimization</a></li>
+          <li><a href="#services">Local SEO</a></li>
+          <li><a href="#services">AI Visibility</a></li>
+          <li><a href="#services">Google Ads</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#inquiry">Free Audit</a></li>
+          <li><a href="mailto:truemarkdigitalagency@gmail.com">truemarkdigitalagency@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">2025 TRUE MARK DIGITAL AGENCY</div>
+      <div class="footer-copy">RESULTS GUARANTEED · $150 MINIMUM FEE NON-REFUNDABLE</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const form = document.getElementById('inquiry-form');
+const submit = document.getElementById('form-submit');
+const error = document.getElementById('form-error');
+const success = document.getElementById('form-success');
+const wrap = document.getElementById('form-wrap');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  submit.disabled = true;
+  submit.textContent = 'Sending...';
+  error.style.display = 'none';
+  try {
+    const res = await fetch('https://formspree.io/f/xzdqrpky', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      wrap.style.display = 'none';
+      success.style.display = 'block';
+    } else {
+      throw new Error('Form error');
     }
-
-    function LabelLeft({ children }) {
-      return (
-        <div style={{display:"inline-flex",alignItems:"center",gap:8,fontFamily:"'DM Mono',monospace",
-          fontSize:11,letterSpacing:"0.2em",textTransform:"uppercase",color:T.red,marginBottom:12}}>
-          <span style={{width:16,height:1,background:T.red,display:"block"}}/>
-          {children}
-        </div>
-      );
-    }
-
-    function Btn({ children, onClick, variant="red", style={}, disabled=false }) {
-      const v = {
-        red:{background:T.red,color:"#fff",border:"none"},
-        dark:{background:T.dark,color:"#fff",border:"none"},
-        outline:{background:"transparent",color:T.text,border:`1.5px solid ${T.border}`},
-        white:{background:"#fff",color:T.red,border:"none"},
-        outlineWhite:{background:"transparent",color:"#fff",border:"1.5px solid rgba(255,255,255,0.4)"},
-      };
-      return (
-        <button onClick={onClick} disabled={disabled}
-          style={{fontFamily:"'Inter',sans-serif",fontSize:15,fontWeight:700,padding:"0.85rem 1.75rem",
-            borderRadius:2,cursor:disabled?"not-allowed":"pointer",opacity:disabled?0.5:1,
-            transition:"opacity 0.15s",whiteSpace:"nowrap",...v[variant],...style}}
-          onMouseEnter={e=>!disabled&&(e.target.style.opacity="0.85")}
-          onMouseLeave={e=>!disabled&&(e.target.style.opacity="1")}>
-          {children}
-        </button>
-      );
-    }
-
-    // ── API ─────────────────────────────────────────────────────
-    async function runClaudeAudit({ bizName, bizCategory, bizCity, bizWebsite, bizChallenge, contactName, contactEmail }) {
-      const prompt = `You are a senior local SEO analyst at True Mark Digital Agency. Conduct a thorough local SEO audit for the following business and return ONLY valid JSON — no markdown, no preamble, no explanation.
-
-BUSINESS:
-- Name: ${bizName}
-- Category: ${bizCategory}
-- Location: ${bizCity}
-- Website: ${bizWebsite || "Not provided"}
-- Challenge: ${bizChallenge || "Not stated"}
-- Contact: ${contactName} (${contactEmail})
-
-Be realistic and specific. Assess typical patterns for a ${bizCategory} business in ${bizCity}. Be direct — do not be generically optimistic.
-
-Return exactly this JSON structure:
-{
-  "overallScore": <0-100 integer>,
-  "scoreSummary": "<2-3 sentences: direct honest assessment of their current local search situation>",
-  "recommendedPackage": "<Presence|Authority|Dominant>",
-  "packageReason": "<1 sentence explaining why this package fits>",
-  "signals": [
-    { "name": "GBP Presence", "score": "<N/10>", "status": "<poor|warn|good>", "desc": "<one sentence>" },
-    { "name": "Review Strength", "score": "<N/10>", "status": "<poor|warn|good>", "desc": "<one sentence>" },
-    { "name": "Local Rankings", "score": "<N/10>", "status": "<poor|warn|good>", "desc": "<one sentence>" },
-    { "name": "Citation Accuracy", "score": "<N/10>", "status": "<poor|warn|good>", "desc": "<one sentence>" },
-    { "name": "Website SEO", "score": "<N/10>", "status": "<poor|warn|good>", "desc": "<one sentence>" },
-    { "name": "Competitor Gap", "score": "<N/10>", "status": "<poor|warn|good>", "desc": "<one sentence>" }
-  ],
-  "sections": [
-    {
-      "icon": "📍", "title": "Google Business Profile",
-      "status": "<poor|warn|good>", "statusLabel": "<Needs Work|Partially Optimized|Well Optimized>",
-      "findings": [
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences specific to this business>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" }
-      ]
-    },
-    {
-      "icon": "⭐", "title": "Reviews & Reputation",
-      "status": "<poor|warn|good>", "statusLabel": "<Needs Work|Developing|Strong>",
-      "findings": [
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" }
-      ]
-    },
-    {
-      "icon": "🔍", "title": "Local Search Visibility",
-      "status": "<poor|warn|good>", "statusLabel": "<Low Visibility|Moderate Visibility|High Visibility>",
-      "findings": [
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" }
-      ]
-    },
-    {
-      "icon": "📋", "title": "Citations & Directories",
-      "status": "<poor|warn|good>", "statusLabel": "<Incomplete|Partial|Complete>",
-      "findings": [
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" }
-      ]
-    },
-    {
-      "icon": "🌐", "title": "Website & On-Page SEO",
-      "status": "<poor|warn|good>", "statusLabel": "<Needs Work|Partially Optimized|Well Optimized>",
-      "findings": [
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" },
-        { "type": "<issue|warning|good>", "title": "<short>", "detail": "<1-2 sentences>" }
-      ]
-    }
-  ],
-  "priorities": [
-    { "title": "<action>", "detail": "<why + what>", "impact": "<high|medium|low>" },
-    { "title": "<action>", "detail": "<why + what>", "impact": "<high|medium|low>" },
-    { "title": "<action>", "detail": "<why + what>", "impact": "<high|medium|low>" },
-    { "title": "<action>", "detail": "<why + what>", "impact": "<high|medium|low>" },
-    { "title": "<action>", "detail": "<why + what>", "impact": "<high|medium|low>" }
-  ],
-  "proposal": {
-    "intro": "<2-3 sentences: personal, direct, speaks to their specific situation>",
-    "whatWeDo": "<2-3 sentences: specific deliverables for their recommended package>",
-    "expectedOutcome": "<1-2 sentences: realistic outcome based on their score and category>",
-    "urgency": "<1 sentence: specific reason why acting now matters>",
-    "nextStep": "<1 sentence: clear single call to action>"
+  } catch {
+    submit.disabled = false;
+    submit.textContent = 'Request Free Audit';
+    error.style.display = 'block';
   }
-}`;
+});
+</script>
 
-      // Cloudflare Worker proxy — keeps your API key secure
-      const WORKER_URL = "https://truemark-audit.danpopsd.workers.dev";
-
-      const res = await fetch(WORKER_URL, {
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({ bizName, bizCategory, bizCity, bizWebsite, bizChallenge, contactName, contactEmail })
-      });
-      if (!res.ok) {
-        const errData = await res.json().catch(()=>({}));
-        throw new Error(errData.error || `Request failed (${res.status})`);
-      }
-      const auditResult = await res.json();
-      if (auditResult.error) throw new Error(auditResult.error);
-      return auditResult;
-    }
-
-    // ── LANDING ──────────────────────────────────────────────────
-    function Landing({ onStartAudit }) {
-      const pw = window.innerWidth < 680;
-
-      const heroStats = [
-        {num:"5X",r:true,label:"More leads from ranking\nin the Google 3-Pack"},
-        {num:"42%",label:"Of local searches click\nthe map pack results"},
-        {num:"7X",label:"More conversions with\na complete GBP listing"},
-        {num:"266%",label:"More leads with\n50+ Google reviews"},
-      ];
-
-      const statsBand = [
-        {num:"46%",label:"Of all Google searches have local intent",src:"Google / Hook Agency 2024"},
-        {num:"78%",label:"Of mobile local searches result in a purchase within 24 hours",src:"BrightLocal 2025"},
-        {num:"81%",label:"Of consumers used Google to evaluate a local business in 2024",src:"BrightLocal 2024"},
-        {num:"35%",label:"Only 35% of small businesses have a Google Business Profile",src:"SMB Marketing Report 2025"},
-      ];
-
-      const howSteps = [
-        {n:"01",title:"Request Your Free Audit",desc:"Fill out a short form — business name, location, category, biggest challenge. Takes two minutes. No call, no commitment.",tag:"You",auto:false},
-        {n:"02",title:"AI Runs Your Local SEO Audit",desc:"Our AI analyzes your GBP signals, local visibility, review strength, citation accuracy, and competitor gaps — immediately.",tag:"Automated",auto:true},
-        {n:"03",title:"Receive Your Report & Proposal",desc:"A full diagnostic report plus a custom proposal lands on screen — showing exactly what is broken, what it costs you, and what to do.",tag:"Automated",auto:true},
-        {n:"04",title:"Pay & We Start Immediately",desc:"Choose your package and pay via Stripe. Onboarding form arrives automatically. We begin work within 24 hours of receiving credentials.",tag:"Automated",auto:true},
-        {n:"05",title:"Results Delivered to Your Inbox",desc:"Every deliverable completed and sent to you. Monthly reports arrive automatically. Nothing is handed back to you.",tag:"Automated",auto:true},
-      ];
-
-      const services = [
-        {icon:"📍",name:"Google Business Profile Optimization",tag:"Core Offer",desc:"Your GBP is where 42% of local clicks happen. We optimize every field, build citation authority, and run a review velocity strategy to land you in the map pack above competitors."},
-        {icon:"🔍",name:"Local SEO & On-Page Optimization",tag:"High Impact",desc:"Neighborhood-level keyword targeting, service page structuring, and technical SEO tuned for local intent. We make your site the one Google recommends when someone nearby is ready to hire."},
-        {icon:"⭐",name:"Reputation Management",tag:"Recurring",desc:"Automated review request sequences, response drafting, and negative review mitigation — all managed for you. Businesses with 50+ reviews earn 266% more leads."},
-        {icon:"📋",name:"Citation Building & Directory Management",tag:"Foundation",desc:"Consistent business info across 50+ directories and niche platforms — the foundational signal powering Google map pack rankings. Built once, monitored automatically."},
-        {icon:"🌐",name:"Website Audit & Conversion Optimization",tag:"Add-On",desc:"Full technical and UX audit identifying what is costing you leads right now — load speed, trust signals, weak CTAs — with a prioritized fix list delivered to your inbox."},
-      ];
-
-      const pkgs = [
-        {name:"Presence",price:"$497",desc:"One-time · Results in 3–6 weeks",features:["Full GBP audit and optimization","15 citation listings built and verified","Review request system set up and delivered","4 GBP posts written and published","30-day results report delivered"],featured:false},
-        {name:"Authority",price:"$997",desc:"One-time · Results in 4–8 weeks",badge:"Most Popular",features:["Everything in Presence","3 service pages optimized for local search","30-citation authority network built","Competitor gap analysis delivered","Reputation management setup with response templates","60-day results report with ranking data"],featured:true},
-        {name:"Dominant",price:"$1,797",desc:"One-time · Results in 6–12 weeks",features:["Everything in Authority","Full website SEO audit with fix list","50+ citation network built and submitted","2 SEO blog posts written and delivered","Google Ads keyword strategy document","90-day milestone report with guarantee review"],featured:false},
-      ];
-
-      const tickers = ["More Leads In Your Inbox","More Calls Every Week","More Booked Jobs","Ranked Above Competitors","Found First On Google","5-Star Reputation Built For You","Results Guaranteed In Writing","Fully Done For You"];
-      const tickerAll = [...tickers,...tickers];
-
-      const cases = [
-        {type:"Photography — Commercial",client:"DanPop SD",sub:"Commercial photographer · Oceanside, CA",m1:"+180%",m1l:"Profile Views",m2:"#1",m2l:"Map Pack",desc:"Full GBP buildout, local citation network, and SEO restructuring that elevated a solo commercial photographer to the top local position in San Diego County.",url:"https://www.danpopsd.com"},
-        {type:"Photography — Studio",client:"True Grain Studios",sub:"Film and portrait studio · Oceanside, CA",m1:"+240%",m1l:"Organic Reach",m2:"4.9★",m2l:"Review Score",desc:"Studio launch presence buildout including GBP optimization, automated review velocity, and local SEO targeting wedding, portrait, and commercial clients across North San Diego County.",url:"https://www.truegrainstudios.com"},
-        {type:"Creative — Multi-Property",client:"True Grain — Editorial",sub:"Commercial and editorial · San Diego, CA",m1:"3X",m1l:"Inbound Leads",m2:"Top 3",m2l:"Search Position",desc:"Multi-property SEO strategy, cross-listing authority building, and brand presence consolidation across three web properties for a commercial photography and production brand.",url:"https://www.danpopsd.com/true-grain-studios"},
-      ];
-
-      return (
-        <div style={{fontFamily:"'Inter',sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
-
-          {/* NAV */}
-          <nav style={{background:"rgba(255,255,255,0.97)",borderBottom:`1px solid ${T.border}`,
-            position:"sticky",top:0,zIndex:100,backdropFilter:"blur(14px)"}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem",height:62,
-              display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-              <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,letterSpacing:"0.14em",color:T.text}}>
-                TRUE<span style={{color:T.red}}>MARK</span>
-              </span>
-              {!pw && (
-                <div style={{display:"flex",gap:28,alignItems:"center"}}>
-                  {[["#how","How It Works"],["#services","Services"],["#pricing","Pricing"],["#guarantee","Guarantee"],["#results","Results"]].map(([h,l]) =>
-                    <a key={h} href={h} style={{fontSize:14,fontWeight:500,color:T.sub,textDecoration:"none"}}>{l}</a>
-                  )}
-                </div>
-              )}
-              <Btn onClick={onStartAudit} style={{fontSize:14,padding:"0.5rem 1.2rem"}}>Free Audit</Btn>
-            </div>
-          </nav>
-
-          {/* HERO */}
-          <section style={{background:T.white,borderBottom:`1px solid ${T.border}`}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:pw?"3.5rem 1.5rem 3rem":"5rem 2rem 4.5rem",
-              display:"grid",gridTemplateColumns:pw?"1fr":"1fr 400px",gap:pw?32:80,alignItems:"center"}}>
-              <div>
-                <div style={{display:"inline-flex",alignItems:"center",gap:8,fontFamily:"'DM Mono',monospace",
-                  fontSize:11,letterSpacing:"0.2em",textTransform:"uppercase",color:T.red,marginBottom:20}}>
-                  <span style={{width:16,height:1,background:T.red,display:"block"}}/>
-                  Local SEO &amp; Digital Presence
-                </div>
-                <h1 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?52:90,lineHeight:0.93,
-                  letterSpacing:"0.02em",color:T.text,marginBottom:24}}>
-                  MORE LEADS.<br/>MORE SALES.<br/><span style={{color:T.red}}>GUARANTEED.</span>
-                </h1>
-                <p style={{fontSize:pw?16:17,lineHeight:1.75,color:T.sub,maxWidth:"46ch",marginBottom:28}}>
-                  We get your business to the top of Google — and keep it there.{" "}
-                  <strong style={{color:T.text}}>More calls. More booked jobs. More revenue.</strong>{" "}
-                  Start with a free AI-powered audit. Results in minutes. No calls required.
-                </p>
-                <div style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:20,flexDirection:pw?"column":"row"}}>
-                  <Btn onClick={onStartAudit} style={{fontSize:16,padding:"1rem 2rem"}}>Get Your Free Audit</Btn>
-                  <Btn variant="outline"><a href="#how" style={{textDecoration:"none",color:"inherit",display:"block",padding:"0 0.25rem"}}>See How It Works</a></Btn>
-                </div>
-                <div style={{display:"flex",alignItems:"center",gap:8,fontSize:13,color:T.mute,flexWrap:"wrap"}}>
-                  {["No calls required","Results in minutes","Guaranteed in writing"].map((t,i)=>(
-                    <span key={t} style={{display:"flex",alignItems:"center",gap:8}}>
-                      {i>0 && <span style={{width:3,height:3,background:T.border,borderRadius:"50%"}}/>}
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Hero card */}
-              <div style={{background:T.dark,padding:"2.25rem 2rem",borderRadius:2}}>
-                <p style={{fontFamily:"'DM Mono',monospace",fontSize:11,letterSpacing:"0.18em",
-                  textTransform:"uppercase",color:"#666",marginBottom:20}}>What Local SEO Delivers</p>
-                {heroStats.map((s,i)=>(
-                  <div key={i} style={{padding:"1rem 0",borderBottom:i<3?`1px solid ${T.border2}`:"none",
-                    display:"flex",justifyContent:"space-between",alignItems:"baseline",gap:12}}>
-                    <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:40,lineHeight:1,color:s.r?T.red:"#fff"}}>{s.num}</span>
-                    <span style={{fontSize:12,color:"#888",lineHeight:1.4,textAlign:"right",whiteSpace:"pre-line"}}>{s.label}</span>
-                  </div>
-                ))}
-                <div style={{marginTop:20,padding:"0.9rem 1rem",background:"rgba(192,57,43,0.12)",
-                  border:"1px solid rgba(192,57,43,0.25)",borderRadius:2}}>
-                  <p style={{fontSize:12,color:"#bbb",lineHeight:1.5}}>
-                    <strong style={{color:"#fff"}}>Sources:</strong> Backlinko 2025 · BrightLocal 2025 · Google/Boostability
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* TICKER */}
-          <div style={{background:T.red,overflow:"hidden",padding:"0.8rem 0",whiteSpace:"nowrap"}}>
-            <div className="tm-ticker" style={{display:"inline-flex"}}>
-              {tickerAll.map((t,i)=>(
-                <span key={i} style={{fontFamily:"'DM Mono',monospace",fontSize:11,letterSpacing:"0.18em",
-                  textTransform:"uppercase",color:"#fff",padding:"0 2.5rem"}}>
-                  {t} <span style={{opacity:0.3,marginLeft:16}}>·</span>
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* STATS BAND */}
-          <div style={{background:T.white,borderBottom:`1px solid ${T.border}`,padding:"3.5rem 0"}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem"}}>
-              <div style={{display:"grid",gridTemplateColumns:pw?"1fr 1fr":"repeat(4,1fr)",gap:1,
-                background:T.border,border:`1px solid ${T.border}`}}>
-                {statsBand.map((s,i)=>(
-                  <div key={i} style={{background:T.white,padding:"2rem 1.75rem",textAlign:"center"}}>
-                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:46,color:T.text,
-                      lineHeight:1,marginBottom:8,letterSpacing:"0.03em"}}>{s.num}</div>
-                    <div style={{fontSize:13,color:T.sub,lineHeight:1.4,marginBottom:4}}>{s.label}</div>
-                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:"0.08em",
-                      textTransform:"uppercase",color:T.mute}}>{s.src}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* HOW IT WORKS */}
-          <section id="how" style={{padding:"5.5rem 0",background:T.bg,borderBottom:`1px solid ${T.border}`}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem"}}>
-              <LabelLeft>How It Works</LabelLeft>
-              <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?36:54,color:T.text,
-                letterSpacing:"0.02em",marginBottom:12}}>From Inquiry to Results — Fully Automated</h2>
-              <p style={{fontSize:15,color:T.sub,maxWidth:"52ch",marginBottom:36,lineHeight:1.7}}>
-                Fill out one form. Our AI handles everything else — audit, analysis, proposal, onboarding, and delivery. No calls. No waiting on us.
-              </p>
-              <div style={{display:"flex",flexDirection:"column",gap:1,background:T.border,border:`1px solid ${T.border}`}}>
-                {howSteps.map((s,i)=>(
-                  <div key={i} style={{background:T.white,display:"grid",
-                    gridTemplateColumns:pw?"48px 1fr":"64px 1fr auto",alignItems:"stretch"}}>
-                    <div style={{background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",
-                      borderRight:`1px solid ${T.border}`,fontFamily:"'Bebas Neue',sans-serif",
-                      fontSize:32,color:T.border,padding:"1.5rem 0"}}>{s.n}</div>
-                    <div style={{padding:"1.5rem 2rem"}}>
-                      <h3 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:T.text,
-                        letterSpacing:"0.03em",marginBottom:6}}>{s.title}</h3>
-                      <p style={{fontSize:14,color:T.sub,lineHeight:1.65}}>{s.desc}</p>
-                    </div>
-                    {!pw && (
-                      <div style={{display:"flex",alignItems:"center",padding:"0 1.75rem",borderLeft:`1px solid ${T.border}`}}>
-                        <span style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:"0.14em",
-                          textTransform:"uppercase",color:"#fff",background:s.auto?T.red:T.dark,
-                          padding:"0.22rem 0.6rem",borderRadius:2,whiteSpace:"nowrap"}}>{s.tag}</span>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div style={{marginTop:28,textAlign:"center"}}>
-                <Btn onClick={onStartAudit} style={{fontSize:16,padding:"1rem 2.5rem"}}>Start Your Free Audit Now</Btn>
-                <p style={{fontFamily:"'DM Mono',monospace",fontSize:11,color:T.mute,letterSpacing:"0.08em",marginTop:10}}>
-                  No calls · No contracts · Results in minutes
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* SERVICES */}
-          <section id="services" style={{padding:"5.5rem 0",background:T.white,borderBottom:`1px solid ${T.border}`}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem"}}>
-              <LabelLeft>What We Do</LabelLeft>
-              <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?36:54,color:T.text,
-                letterSpacing:"0.02em",marginBottom:32}}>Every Service. Fully Done For You.</h2>
-              <div style={{display:"flex",flexDirection:"column",gap:1,background:T.border,border:`1px solid ${T.border}`}}>
-                {services.map((s,i)=>(
-                  <div key={i} style={{background:T.bg,display:"grid",
-                    gridTemplateColumns:pw?"1fr":"2.5rem 1fr auto",gap:pw?0:24,alignItems:"start",
-                    padding:pw?"1.5rem 1.25rem":0}}>
-                    {!pw && <span style={{fontFamily:"'DM Mono',monospace",fontSize:11,color:T.mute,
-                      paddingTop:4,paddingLeft:"1.5rem",paddingTop:"1.75rem"}}>0{i+1}</span>}
-                    <div style={{padding:pw?0:"1.75rem 0"}}>
-                      <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
-                        <span>{s.icon}</span>
-                        <h3 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:T.text,letterSpacing:"0.03em"}}>{s.name}</h3>
-                      </div>
-                      <p style={{fontSize:14,color:T.sub,lineHeight:1.65}}>{s.desc}</p>
-                    </div>
-                    {!pw && <div style={{paddingRight:"1.5rem",paddingTop:"1.75rem"}}>
-                      <span style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.12em",
-                        textTransform:"uppercase",color:T.mute,border:`1px solid ${T.border}`,
-                        padding:"0.25rem 0.55rem",whiteSpace:"nowrap"}}>{s.tag}</span>
-                    </div>}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* PRICING */}
-          <section id="pricing" style={{padding:"5.5rem 0",background:T.bg,borderBottom:`1px solid ${T.border}`}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem"}}>
-              <LabelLeft>Pricing</LabelLeft>
-              <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?36:54,color:T.text,
-                letterSpacing:"0.02em",marginBottom:8}}>Clear Pricing. No Surprises.</h2>
-              <p style={{fontSize:15,color:T.sub,maxWidth:"56ch",marginBottom:32,lineHeight:1.7}}>
-                One-time project fee. No subscriptions required. Add individual services as needed, or upgrade to a monthly retainer when you are ready.
-              </p>
-              <div style={{display:"grid",gridTemplateColumns:pw?"1fr":"repeat(3,1fr)",gap:1,
-                background:T.border,border:`1px solid ${T.border}`}}>
-                {pkgs.map((p,i)=>(
-                  <div key={i} style={{background:p.featured?T.dark:T.white,padding:"2.25rem 2rem",
-                    display:"flex",flexDirection:"column"}}>
-                    {p.badge && <span style={{display:"inline-block",fontFamily:"'DM Mono',monospace",
-                      fontSize:10,letterSpacing:"0.15em",textTransform:"uppercase",color:"#fff",
-                      background:T.red,padding:"0.2rem 0.55rem",marginBottom:16,alignSelf:"flex-start"}}>{p.badge}</span>}
-                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:26,letterSpacing:"0.05em",
-                      color:p.featured?"#fff":T.text,marginBottom:4}}>{p.name}</div>
-                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:50,letterSpacing:"0.02em",
-                      lineHeight:1,color:p.featured?"#fff":T.text,marginBottom:4}}>{p.price}</div>
-                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:11,letterSpacing:"0.1em",
-                      textTransform:"uppercase",color:p.featured?"#666":T.mute,marginBottom:24}}>{p.desc}</div>
-                    <ul style={{listStyle:"none",flex:1,marginBottom:24}}>
-                      {p.features.map((f,j)=>(
-                        <li key={j} style={{fontSize:14,color:p.featured?"#aaa":T.sub,padding:"0.55rem 0",
-                          borderBottom:`1px solid ${p.featured?T.border2:T.border}`,
-                          display:"flex",gap:10,lineHeight:1.45}}>
-                          <span style={{color:T.red,fontFamily:"'DM Mono',monospace",fontSize:12,flexShrink:0,marginTop:2}}>→</span>{f}
-                        </li>
-                      ))}
-                    </ul>
-                    <Btn onClick={onStartAudit} variant={p.featured?"red":"outline"}
-                      style={{display:"block",textAlign:"center",width:"100%",padding:"0.85rem",fontSize:14}}>
-                      Get Started — Free Audit First
-                    </Btn>
-                  </div>
-                ))}
-              </div>
-              <p style={{fontFamily:"'DM Mono',monospace",fontSize:11,color:T.mute,marginTop:16,letterSpacing:"0.05em"}}>
-                All packages include the results guarantee. Retainer options available after project delivery.
-              </p>
-            </div>
-          </section>
-
-          {/* GUARANTEE */}
-          <section id="guarantee" style={{padding:"5.5rem 0",background:T.dark,borderBottom:`1px solid ${T.border2}`}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem"}}>
-              <div style={{display:"grid",gridTemplateColumns:pw?"1fr":"1fr 1fr",gap:pw?36:80,alignItems:"start"}}>
-                <div>
-                  <LabelLeft>Our Guarantee</LabelLeft>
-                  <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?36:54,color:"#fff",
-                    letterSpacing:"0.02em",marginBottom:16}}>We Hit Your Goals — Or We Work for Free.</h2>
-                  <p style={{fontSize:15,color:"#999",lineHeight:1.75,marginBottom:28}}>
-                    Every project comes with a results guarantee. Your project fee covers full setup and delivery. If we miss agreed milestones at 90 days, your next purchase is fully credited — guaranteed in writing.
-                  </p>
-                  {[
-                    ["01","Non-refundable project fee","Covers your full audit, strategy, and all deliverables. Ensures every client is a committed partner."],
-                    ["02","Agreed milestone targets","Specific, measurable goals set before work begins — GBP ranking, visibility, or review score targets."],
-                    ["03","Miss the target — we credit you","If milestones are not met at 90 days, your next purchase is fully credited. No disputes, no fine print."],
-                  ].map(([n,t,d],i)=>(
-                    <div key={i} style={{background:T.dark2,padding:"1.25rem 1.5rem",marginBottom:1,
-                      display:"flex",gap:16,alignItems:"flex-start"}}>
-                      <span style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:T.red,flexShrink:0,paddingTop:3}}>{n}</span>
-                      <div>
-                        <strong style={{fontSize:14,color:"#fff",display:"block",marginBottom:4}}>{t}</strong>
-                        <p style={{fontSize:13,color:"#888",lineHeight:1.55}}>{d}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div style={{background:T.dark2,border:`1px solid ${T.border2}`,padding:"2.25rem 2rem",borderRadius:2}}>
-                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:26,color:T.red,letterSpacing:"0.05em",marginBottom:4}}>How Payment Works</div>
-                  <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.15em",textTransform:"uppercase",color:"#555",marginBottom:24}}>Stripe · Secure automated billing</div>
-                  {[
-                    ["01","Submit your free audit.","Fill out the form. Your audit and proposal arrive in minutes — fully automated."],
-                    ["02","Review your proposal.","See exactly what is broken, what it costs you, and which package addresses it."],
-                    ["03","Pay via Stripe.","One-time project fee collected securely. Onboarding form sent automatically on payment."],
-                    ["04","We start within 24 hours.","No waiting. Deliverables begin immediately after your onboarding form is submitted."],
-                    ["05","Results delivered.","30-day and 90-day reports arrive automatically. Guarantee reviewed at 90 days."],
-                  ].map(([n,t,d],i)=>(
-                    <div key={i} style={{display:"flex",gap:12,alignItems:"flex-start",padding:"1rem 0",
-                      borderBottom:i<4?`1px solid ${T.border2}`:"none"}}>
-                      <span style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:T.red,flexShrink:0,paddingTop:3}}>{n}</span>
-                      <p style={{fontSize:13,color:"#aaa",lineHeight:1.55}}>
-                        <strong style={{color:"#fff"}}>{t} </strong>{d}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* CASE STUDIES */}
-          <section id="results" style={{padding:"5.5rem 0",background:T.white,borderBottom:`1px solid ${T.border}`}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem"}}>
-              <LabelLeft>Proof of Work</LabelLeft>
-              <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?36:54,color:T.text,
-                letterSpacing:"0.02em",marginBottom:32}}>Real Results for Real Businesses</h2>
-              <div style={{display:"grid",gridTemplateColumns:pw?"1fr":"repeat(3,1fr)",gap:20}}>
-                {cases.map((c,i)=>(
-                  <div key={i} style={{background:T.bg,border:`1px solid ${T.border}`,padding:"2rem",
-                    display:"flex",flexDirection:"column",borderRadius:2}}>
-                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.14em",
-                      textTransform:"uppercase",color:T.red,marginBottom:8}}>{c.type}</div>
-                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:T.text,marginBottom:4}}>{c.client}</div>
-                    <div style={{fontSize:12,color:T.mute,marginBottom:20}}>{c.sub}</div>
-                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:1,background:T.border,
-                      border:`1px solid ${T.border}`,marginBottom:20}}>
-                      {[{v:c.m1,l:c.m1l},{v:c.m2,l:c.m2l}].map((m,j)=>(
-                        <div key={j} style={{background:T.white,padding:"0.9rem 1rem"}}>
-                          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:30,color:T.text,lineHeight:1,marginBottom:4}}>{m.v}</div>
-                          <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:"0.1em",textTransform:"uppercase",color:T.mute}}>{m.l}</div>
-                        </div>
-                      ))}
-                    </div>
-                    <p style={{fontSize:14,color:T.sub,lineHeight:1.65,flex:1,marginBottom:16}}>{c.desc}</p>
-                    <a href={c.url} target="_blank" rel="noopener"
-                      style={{fontFamily:"'DM Mono',monospace",fontSize:11,letterSpacing:"0.1em",color:T.red}}>
-                      View Live Site →
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section style={{background:T.red,padding:"5.5rem 0"}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem",
-              display:"grid",gridTemplateColumns:pw?"1fr":"1fr auto",gap:pw?28:60,alignItems:"center"}}>
-              <div>
-                <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?36:54,color:"#fff",
-                  letterSpacing:"0.02em",marginBottom:12}}>Ready to Start Getting More Leads?</h2>
-                <p style={{fontSize:15,color:"rgba(255,255,255,0.72)",lineHeight:1.7,maxWidth:"50ch"}}>
-                  Get your free AI-powered local SEO audit. No calls. No commitment. Your full diagnostic and custom proposal in minutes.
-                </p>
-              </div>
-              <div style={{display:"flex",flexDirection:"column",gap:10,flexShrink:0}}>
-                <Btn onClick={onStartAudit} variant="white" style={{fontSize:16,padding:"1rem 2rem"}}>Get Your Free Audit</Btn>
-                <a href="mailto:truemarkdigitalagency@gmail.com"
-                  style={{fontSize:14,fontWeight:600,color:"rgba(255,255,255,0.8)",textAlign:"center"}}>
-                  Or email us directly →
-                </a>
-                <p style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:"rgba(255,255,255,0.4)",
-                  letterSpacing:"0.06em",textAlign:"center"}}>No calls · No contracts · Results guaranteed</p>
-              </div>
-            </div>
-          </section>
-
-          {/* FOOTER */}
-          <footer style={{background:T.dark,padding:"4rem 0 2rem",borderTop:`1px solid ${T.border2}`}}>
-            <div style={{maxWidth:1120,margin:"0 auto",padding:"0 2rem"}}>
-              <div style={{display:"grid",gridTemplateColumns:pw?"1fr 1fr":"1.6fr 1fr 1fr 1fr",gap:pw?24:48,marginBottom:40}}>
-                <div>
-                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,letterSpacing:"0.14em",color:"#fff",marginBottom:10}}>
-                    TRUE<span style={{color:T.red}}>MARK</span>
-                  </div>
-                  <p style={{fontSize:14,color:"#666",lineHeight:1.65,maxWidth:"26ch"}}>More leads. More sales. For local service businesses nationwide.</p>
-                </div>
-                {[
-                  {title:"Services",links:[["GBP Optimization","#services"],["Local SEO","#services"],["Reputation Management","#services"],["Citation Building","#services"]]},
-                  {title:"Company",links:[["How It Works","#how"],["Guarantee","#guarantee"],["Results","#results"],["Pricing","#pricing"]]},
-                  {title:"Contact",links:[["truemarkdigitalagency@gmail.com","mailto:truemarkdigitalagency@gmail.com"],["Get a Free Audit","#"]]},
-                ].map((col,i)=>(
-                  <div key={i}>
-                    <p style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.2em",textTransform:"uppercase",color:"#444",marginBottom:14}}>{col.title}</p>
-                    <div style={{display:"flex",flexDirection:"column",gap:8}}>
-                      {col.links.map(([label,href],j)=>(
-                        <a key={j} href={href} style={{fontSize:14,color:"#777",textDecoration:"none"}}>{label}</a>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div style={{paddingTop:24,borderTop:`1px solid ${T.border2}`,display:"flex",
-                justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:12}}>
-                <p style={{fontSize:12,color:"#444"}}>© 2025 True Mark Digital Agency. All rights reserved.</p>
-                <p style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.1em",textTransform:"uppercase",color:"#333"}}>San Diego, CA · Serving clients nationally</p>
-              </div>
-            </div>
-          </footer>
-        </div>
-      );
-    }
-
-    // ── AUDIT FORM ───────────────────────────────────────────────
-    function AuditForm({ onSubmit, onBack }) {
-      const [form, setForm] = useState({bizName:"",bizCategory:"",bizCity:"",bizWebsite:"",bizChallenge:"",contactName:"",contactEmail:""});
-      const pw = window.innerWidth < 680;
-      const set = k => e => setForm(f=>({...f,[k]:e.target.value}));
-
-      const submit = () => {
-        if (!form.bizName||!form.bizCategory||!form.bizCity||!form.contactName||!form.contactEmail) {
-          alert("Please fill in all required fields."); return;
-        }
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.contactEmail)) {
-          alert("Please enter a valid email address."); return;
-        }
-        onSubmit(form);
-      };
-
-      const field = {fontFamily:"'Inter',sans-serif",fontSize:15,color:T.text,background:T.bg,
-        border:`1.5px solid ${T.border}`,padding:"0.7rem 0.9rem",borderRadius:2,width:"100%"};
-
-      return (
-        <div style={{fontFamily:"'Inter',sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
-          <nav style={{background:T.white,borderBottom:`1px solid ${T.border}`,padding:"0 2rem",
-            display:"flex",alignItems:"center",justifyContent:"space-between",height:58,position:"sticky",top:0,zIndex:100}}>
-            <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,letterSpacing:"0.14em",color:T.text}}>
-              TRUE<span style={{color:T.red}}>MARK</span>
-            </span>
-            <button onClick={onBack} style={{fontSize:13,color:T.mute,background:"none",border:"none",cursor:"pointer",fontFamily:"'Inter',sans-serif"}}>← Back</button>
-          </nav>
-          <div style={{maxWidth:720,margin:"0 auto",padding:pw?"2rem 1.25rem 4rem":"3rem 2rem 5rem"}}>
-            <div style={{textAlign:"center",marginBottom:36}}>
-              <LabelCenter>Free Audit</LabelCenter>
-              <h1 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?40:58,color:T.text,letterSpacing:"0.02em",marginBottom:12}}>Your Free Local SEO Audit</h1>
-              <p style={{fontSize:15,color:T.sub,maxWidth:"48ch",margin:"0 auto",lineHeight:1.7}}>Tell us about your business. Our AI will analyze your local search presence and deliver a clear, actionable report — results in minutes.</p>
-            </div>
-            <div style={{background:T.white,border:`1px solid ${T.border}`,padding:pw?"1.5rem":"2.5rem",borderRadius:2}}>
-              <div style={{display:"grid",gridTemplateColumns:pw?"1fr":"1fr 1fr",gap:20,marginBottom:20}}>
-                {[
-                  {k:"bizName",l:"Business Name",r:true,ph:"e.g. Dan's Plumbing Co.",t:"text"},
-                  {k:"bizCity",l:"City & State",r:true,ph:"e.g. Oceanside, CA",t:"text"},
-                  {k:"contactName",l:"Your Name",r:true,ph:"First and last name",t:"text"},
-                  {k:"contactEmail",l:"Email Address",r:true,ph:"you@yourcompany.com",t:"email"},
-                ].map(f=>(
-                  <div key={f.k}>
-                    <label style={{fontSize:13,fontWeight:600,color:T.text,marginBottom:6,display:"block"}}>
-                      {f.l} {f.r && <span style={{color:T.red}}>*</span>}
-                    </label>
-                    <input type={f.t} value={form[f.k]} onChange={set(f.k)} placeholder={f.ph} style={field}/>
-                  </div>
-                ))}
-                <div>
-                  <label style={{fontSize:13,fontWeight:600,color:T.text,marginBottom:6,display:"block"}}>Business Category <span style={{color:T.red}}>*</span></label>
-                  <select value={form.bizCategory} onChange={set("bizCategory")}
-                    style={{...field,backgroundImage:"url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23555' d='M1 1l5 5 5-5'/%3E%3C/svg%3E\")",backgroundRepeat:"no-repeat",backgroundPosition:"right 0.9rem center",paddingRight:"2.5rem",appearance:"none",cursor:"pointer",WebkitAppearance:"none"}}>
-                    <option value="">Select your category</option>
-                    {["Plumbing","HVAC","Construction / General Contractor","Mobile Detailing / Car Wash","Photography / Studio","Roofing","Electrical","Landscaping","Home Services","Other Local Service"].map(c=><option key={c}>{c}</option>)}
-                  </select>
-                </div>
-                <div>
-                  <label style={{fontSize:13,fontWeight:600,color:T.text,marginBottom:6,display:"block"}}>Website URL <span style={{fontSize:11,color:T.mute,fontWeight:400}}>(optional)</span></label>
-                  <input type="url" value={form.bizWebsite} onChange={set("bizWebsite")} placeholder="https://yoursite.com" style={field}/>
-                </div>
-              </div>
-              <div style={{marginBottom:24}}>
-                <label style={{fontSize:13,fontWeight:600,color:T.text,marginBottom:6,display:"block"}}>Biggest challenge right now? <span style={{fontSize:11,color:T.mute,fontWeight:400}}>(optional)</span></label>
-                <textarea value={form.bizChallenge} onChange={set("bizChallenge")}
-                  placeholder="e.g. Not showing up on Google, not getting enough calls, bad reviews..."
-                  style={{...field,resize:"vertical",minHeight:80}}/>
-                <p style={{fontSize:12,color:T.mute,marginTop:6}}>Helps us tailor the audit to your specific situation.</p>
-              </div>
-              <button onClick={submit}
-                style={{width:"100%",background:T.red,color:"#fff",fontFamily:"'Inter',sans-serif",
-                  fontSize:16,fontWeight:700,border:"none",padding:"1rem",borderRadius:2,cursor:"pointer"}}>
-                Run My Free Audit →
-              </button>
-              <p style={{fontFamily:"'DM Mono',monospace",fontSize:11,color:T.mute,textAlign:"center",marginTop:10,letterSpacing:"0.05em"}}>
-                No calls · No contracts · Results in minutes
-              </p>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    // ── LOADING ──────────────────────────────────────────────────
-    function LoadingScreen({ currentStep }) {
-      const steps = ["Reviewing business information","Checking Google Business Profile signals","Analyzing local search visibility","Evaluating review and reputation signals","Assessing citation and directory presence","Identifying competitor gaps","Building your priority action plan"];
-      return (
-        <div style={{fontFamily:"'Inter',sans-serif",background:T.bg,minHeight:"100vh",display:"flex",alignItems:"center",justifyContent:"center",padding:"2rem"}}>
-          <div style={{maxWidth:520,width:"100%",textAlign:"center"}}>
-            <div className="tm-spin" style={{width:48,height:48,border:`3px solid ${T.border}`,borderTopColor:T.red,borderRadius:"50%",margin:"0 auto 24px"}}/>
-            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:36,color:T.text,letterSpacing:"0.03em",marginBottom:8}}>Analyzing Your Business</h2>
-            <p style={{fontSize:15,color:T.sub,marginBottom:32}}>Our AI is running a full local SEO diagnostic. This takes about 30 seconds.</p>
-            <div style={{background:T.white,border:`1px solid ${T.border}`,borderRadius:2,textAlign:"left"}}>
-              {steps.map((s,i)=>{
-                const done=i<currentStep, active=i===currentStep;
-                return (
-                  <div key={i} style={{padding:"0.85rem 1.25rem",borderBottom:i<steps.length-1?`1px solid ${T.border}`:"none",
-                    display:"flex",alignItems:"center",gap:12,fontSize:14,
-                    color:done?T.green:active?T.text:T.mute,transition:"color 0.3s"}}>
-                    <span className={active?"tm-pulse":""} style={{width:8,height:8,borderRadius:"50%",flexShrink:0,
-                      background:done?T.green:active?T.red:T.border,transition:"background 0.3s"}}/>
-                    {s}
-                    {done && <span style={{marginLeft:"auto",fontSize:12}}>✓</span>}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    // ── RESULTS ──────────────────────────────────────────────────
-    function ResultsPage({ data, formData, onReset }) {
-      const pw = window.innerWidth < 680;
-      const { overallScore, scoreSummary, recommendedPackage, packageReason, signals, sections, priorities, proposal } = data;
-      const scoreColor = overallScore<40?T.red:overallScore<70?"#b45309":T.green;
-      const badge = {
-        poor:{bg:T.redBg,color:T.redText,label:"Poor"},
-        warn:{bg:T.amberBg,color:T.amber,label:"Fair"},
-        good:{bg:T.greenBg,color:T.green,label:"Good"},
-      };
-      const findIcon = {issue:"❌",warning:"⚠️",good:"✅"};
-      const impactStyle = {
-        high:{background:"rgba(192,57,43,0.15)",color:"#f87171"},
-        medium:{background:"rgba(180,83,9,0.15)",color:"#fbbf24"},
-        low:{background:"rgba(26,122,74,0.15)",color:"#4ade80"},
-      };
-      const impactLabel = {high:"High Impact",medium:"Medium Impact",low:"Quick Win"};
-      const pkgPrices = {Presence:"$497",Authority:"$997",Dominant:"$1,797"};
-
-      return (
-        <div style={{fontFamily:"'Inter',sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
-          <nav className="no-print" style={{background:T.white,borderBottom:`1px solid ${T.border}`,padding:"0 2rem",
-            display:"flex",alignItems:"center",justifyContent:"space-between",height:58,position:"sticky",top:0,zIndex:100}}>
-            <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,letterSpacing:"0.14em",color:T.text}}>
-              TRUE<span style={{color:T.red}}>MARK</span>
-            </span>
-            <div style={{display:"flex",gap:12}}>
-              <button onClick={()=>window.print()} style={{fontSize:13,color:T.mute,background:"none",
-                border:`1px solid ${T.border}`,cursor:"pointer",padding:"0.4rem 0.9rem",borderRadius:2,fontFamily:"'Inter',sans-serif"}}>🖨 Print</button>
-              <button onClick={onReset} style={{fontSize:13,color:T.mute,background:"none",border:"none",cursor:"pointer",fontFamily:"'Inter',sans-serif"}}>← New Audit</button>
-            </div>
-          </nav>
-
-          <div style={{maxWidth:820,margin:"0 auto",padding:pw?"1.5rem 1.25rem 4rem":"2.5rem 2rem 5rem"}}>
-
-            {/* Header card */}
-            <div className="tm-fade" style={{background:T.dark,color:"#fff",padding:pw?"1.75rem":"2.5rem",borderRadius:2,marginBottom:20}}>
-              <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:20,marginBottom:24,flexWrap:"wrap"}}>
-                <div>
-                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:pw?28:36,color:"#fff",letterSpacing:"0.03em",marginBottom:6}}>{formData.bizName}</div>
-                  <div style={{fontFamily:"'DM Mono',monospace",fontSize:11,letterSpacing:"0.12em",textTransform:"uppercase",color:"#555"}}>{formData.bizCategory} · {formData.bizCity}</div>
-                </div>
-                <div style={{textAlign:"center",flexShrink:0}}>
-                  <div style={{width:88,height:88,borderRadius:"50%",border:`3px solid ${scoreColor}`,
-                    display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
-                    <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:scoreColor,lineHeight:1}}>{overallScore}</span>
-                    <span style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#666"}}>/100</span>
-                  </div>
-                  <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:"0.15em",textTransform:"uppercase",color:"#555",marginTop:6}}>Overall Score</div>
-                </div>
-              </div>
-              <div style={{fontSize:14,color:"#bbb",lineHeight:1.7,paddingTop:20,borderTop:`1px solid ${T.border2}`}}>{scoreSummary}</div>
-            </div>
-
-            {/* Signals */}
-            <div className="tm-fade" style={{display:"grid",gridTemplateColumns:pw?"1fr 1fr":"repeat(3,1fr)",gap:1,
-              background:T.border,border:`1px solid ${T.border}`,borderRadius:2,marginBottom:20}}>
-              {signals.map((s,i)=>(
-                <div key={i} style={{background:T.white,padding:"1.25rem 1.1rem"}}>
-                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
-                    <span style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.14em",textTransform:"uppercase",color:T.mute}}>{s.name}</span>
-                    <span style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:"0.1em",textTransform:"uppercase",
-                      padding:"0.2rem 0.5rem",borderRadius:2,background:badge[s.status]?.bg,color:badge[s.status]?.color}}>
-                      {badge[s.status]?.label}
-                    </span>
-                  </div>
-                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:28,color:T.text,lineHeight:1,marginBottom:6}}>{s.score}</div>
-                  <div style={{fontSize:12,color:T.sub,lineHeight:1.4}}>{s.desc}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Sections */}
-            {sections.map((sec,i)=>(
-              <div key={i} className="tm-fade" style={{background:T.white,border:`1px solid ${T.border}`,borderRadius:2,marginBottom:16,overflow:"hidden"}}>
-                <div style={{padding:"1.1rem 1.5rem",borderBottom:`1px solid ${T.border}`,display:"flex",alignItems:"center",gap:12}}>
-                  <span style={{fontSize:18}}>{sec.icon}</span>
-                  <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:T.text,letterSpacing:"0.03em",flex:1}}>{sec.title}</span>
-                  <span style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.12em",textTransform:"uppercase",
-                    padding:"0.22rem 0.6rem",borderRadius:2,background:badge[sec.status]?.bg,color:badge[sec.status]?.color}}>
-                    {sec.statusLabel}
-                  </span>
-                </div>
-                <div style={{padding:"0 1.5rem"}}>
-                  {sec.findings.map((f,j)=>(
-                    <div key={j} style={{display:"flex",gap:12,alignItems:"flex-start",padding:"0.85rem 0",
-                      borderBottom:j<sec.findings.length-1?`1px solid ${T.border}`:"none"}}>
-                      <span style={{fontSize:14,flexShrink:0,marginTop:2}}>{findIcon[f.type]}</span>
-                      <div style={{fontSize:14,color:T.sub,lineHeight:1.55}}>
-                        <strong style={{color:T.text,display:"block",marginBottom:3}}>{f.title}</strong>
-                        {f.detail}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-            {/* Priorities */}
-            <div className="tm-fade" style={{background:T.dark,borderRadius:2,marginBottom:20,overflow:"hidden"}}>
-              <div style={{padding:"1.1rem 1.5rem",borderBottom:`1px solid ${T.border2}`,display:"flex",alignItems:"center",gap:10}}>
-                <span style={{fontSize:18}}>🎯</span>
-                <h3 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#fff",letterSpacing:"0.03em"}}>Your Priority Action Plan</h3>
-              </div>
-              {priorities.map((p,i)=>(
-                <div key={i} style={{padding:"1rem 1.5rem",borderBottom:i<priorities.length-1?`1px solid ${T.border2}`:"none",
-                  display:"grid",gridTemplateColumns:pw?"1.5rem 1fr":"1.75rem 1fr auto",gap:pw?12:16,alignItems:"start"}}>
-                  <span style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:T.red,paddingTop:3}}>0{i+1}</span>
-                  <div>
-                    <strong style={{fontSize:14,color:"#fff",display:"block",marginBottom:4}}>{p.title}</strong>
-                    <p style={{fontSize:13,color:"#888",lineHeight:1.55}}>{p.detail}</p>
-                  </div>
-                  {!pw && <span style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:"0.1em",textTransform:"uppercase",
-                    padding:"0.22rem 0.5rem",borderRadius:2,whiteSpace:"nowrap",alignSelf:"start",
-                    ...impactStyle[p.impact]}}>{impactLabel[p.impact]}</span>}
-                </div>
-              ))}
-            </div>
-
-            {/* Proposal */}
-            <div className="tm-fade" style={{background:T.white,border:`1px solid ${T.border}`,borderRadius:2,padding:pw?"1.75rem":"2.5rem",marginBottom:20}}>
-              <LabelLeft>Your Custom Proposal</LabelLeft>
-              <p style={{fontSize:15,color:T.sub,lineHeight:1.75,marginBottom:16}}>{proposal.intro}</p>
-              <p style={{fontSize:15,color:T.sub,lineHeight:1.75,marginBottom:16}}>{proposal.whatWeDo}</p>
-              <p style={{fontSize:15,color:T.sub,lineHeight:1.75,marginBottom:24}}>{proposal.expectedOutcome}</p>
-
-              <div style={{background:T.bg,border:`1px solid ${T.border}`,padding:"1.25rem 1.5rem",borderRadius:2,marginBottom:20}}>
-                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:12}}>
-                  <div>
-                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:"0.15em",textTransform:"uppercase",color:T.mute,marginBottom:4}}>Recommended Package</div>
-                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:28,color:T.text,letterSpacing:"0.03em"}}>{recommendedPackage} — {pkgPrices[recommendedPackage]}</div>
-                    <div style={{fontSize:14,color:T.sub,marginTop:4}}>{packageReason}</div>
-                  </div>
-                  <span style={{background:T.red,color:"#fff",fontFamily:"'DM Mono',monospace",fontSize:10,
-                    letterSpacing:"0.15em",textTransform:"uppercase",padding:"0.22rem 0.7rem",borderRadius:2}}>Best Fit</span>
-                </div>
-              </div>
-
-              <div style={{background:"rgba(192,57,43,0.06)",border:"1px solid rgba(192,57,43,0.15)",
-                padding:"1rem 1.25rem",borderRadius:2,marginBottom:24}}>
-                <p style={{fontSize:14,color:T.sub,lineHeight:1.55}}>
-                  <strong style={{color:T.text}}>Why act now: </strong>{proposal.urgency}
-                </p>
-              </div>
-
-              <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
-                <button onClick={()=>window.open(`mailto:truemarkdigitalagency@gmail.com?subject=Audit Report — ${formData.bizName}&body=Hi, I received my free audit and am ready to get started with the ${recommendedPackage} package.`,"_blank")}
-                  style={{fontFamily:"'Inter',sans-serif",fontSize:15,fontWeight:700,padding:"0.9rem 1.75rem",
-                    background:T.red,color:"#fff",border:"none",borderRadius:2,cursor:"pointer"}}>
-                  Get Started — Email Us Your Report
-                </button>
-                <button onClick={onReset}
-                  style={{fontFamily:"'Inter',sans-serif",fontSize:15,fontWeight:600,color:T.sub,
-                    background:"none",border:`1.5px solid ${T.border}`,padding:"0.9rem 1.75rem",borderRadius:2,cursor:"pointer"}}>
-                  Run Another Audit
-                </button>
-              </div>
-              <p style={{fontSize:13,color:T.mute,marginTop:10}}>
-                Or email: <a href="mailto:truemarkdigitalagency@gmail.com" style={{color:T.red}}>truemarkdigitalagency@gmail.com</a> — reference your audit for {formData.bizName}.
-              </p>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    // ── ERROR ────────────────────────────────────────────────────
-    function ErrorScreen({ message, onReset }) {
-      return (
-        <div style={{fontFamily:"'Inter',sans-serif",background:T.bg,minHeight:"100vh",display:"flex",alignItems:"center",justifyContent:"center",padding:"2rem"}}>
-          <div style={{maxWidth:480,width:"100%",background:T.white,border:"1px solid #fca5a5",padding:"2.5rem",borderRadius:2,textAlign:"center"}}>
-            <h3 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:28,color:T.red,letterSpacing:"0.03em",marginBottom:8}}>Audit Could Not Complete</h3>
-            <p style={{fontSize:14,color:T.sub,marginBottom:24,lineHeight:1.6}}>{message}</p>
-            <p style={{fontSize:13,color:T.mute,marginBottom:24}}>Please try again. If the problem continues, email us at truemarkdigitalagency@gmail.com and we will run your audit manually within a few hours.</p>
-            <button onClick={onReset} style={{fontFamily:"'Inter',sans-serif",fontSize:15,fontWeight:700,padding:"0.85rem 1.75rem",background:T.dark,color:"#fff",border:"none",borderRadius:2,cursor:"pointer"}}>Try Again</button>
-          </div>
-        </div>
-      );
-    }
-
-    // ── ROOT ─────────────────────────────────────────────────────
-    function App() {
-      const [view, setView] = useState(VIEWS.LANDING);
-      const [formData, setFormData] = useState(null);
-      const [auditData, setAuditData] = useState(null);
-      const [currentStep, setCurrentStep] = useState(0);
-      const [errorMsg, setErrorMsg] = useState("");
-
-      const go = v => { setView(v); window.scrollTo(0,0); };
-
-      const handleSubmit = async (form) => {
-        setFormData(form);
-        setCurrentStep(0);
-        go(VIEWS.LOADING);
-
-        let step = 0;
-        const interval = setInterval(()=>{ step++; setCurrentStep(step); if(step>=6) clearInterval(interval); }, 900);
-
-        try {
-          const result = await runClaudeAudit(form);
-          clearInterval(interval);
-          setCurrentStep(7);
-          setTimeout(()=>{ setAuditData(result); go(VIEWS.RESULTS); }, 600);
-        } catch(err) {
-          clearInterval(interval);
-          setErrorMsg(err.message || "Something went wrong. Please try again.");
-          go(VIEWS.ERROR);
-        }
-      };
-
-      const reset = () => { setView(VIEWS.LANDING); setFormData(null); setAuditData(null); setCurrentStep(0); window.scrollTo(0,0); };
-
-      if (view === VIEWS.LANDING)  return <Landing onStartAudit={()=>go(VIEWS.AUDIT)} />;
-      if (view === VIEWS.AUDIT)    return <AuditForm onSubmit={handleSubmit} onBack={()=>go(VIEWS.LANDING)} />;
-      if (view === VIEWS.LOADING)  return <LoadingScreen currentStep={currentStep} />;
-      if (view === VIEWS.RESULTS)  return <ResultsPage data={auditData} formData={formData} onReset={reset} />;
-      if (view === VIEWS.ERROR)    return <ErrorScreen message={errorMsg} onReset={reset} />;
-      return null;
-    }
-
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<App />);
-  </script>
 </body>
 </html>
